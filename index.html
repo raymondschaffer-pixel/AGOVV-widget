@@ -7,22 +7,30 @@
 <style>
 body{
     font-family:Arial,sans-serif;
-    background:#fff;
     margin:0;
-    padding:20px;
+    padding:15px;
+    background:#fff;
 }
 
 .header{
     text-align:center;
-    color:#0099d8;
-    font-size:26px;
-    font-weight:bold;
     margin-bottom:20px;
 }
 
+.logo{
+    width:80px;
+}
+
+h2{
+    color:#0099d8;
+    margin:10px 0;
+}
+
 .wedstrijd{
-    border-bottom:1px solid #ddd;
-    padding:15px 0;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:15px;
+    margin-bottom:15px;
 }
 
 .datum{
@@ -31,15 +39,22 @@ body{
     margin-bottom:10px;
 }
 
-.regel{
+.teams{
     display:flex;
     justify-content:space-between;
-    align-items:center;
+    font-size:18px;
+    font-weight:bold;
 }
 
 .tijd{
-    font-weight:bold;
-    font-size:20px;
+    text-align:center;
+    margin:10px 0;
+    font-size:22px;
+}
+
+.locatie{
+    color:#666;
+    font-size:14px;
 }
 
 .knop{
@@ -50,39 +65,60 @@ body{
     padding:12px;
     border-radius:8px;
     text-decoration:none;
-    margin-top:20px;
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="header">
-⚽ AGOVV O14-1
+<img class="logo"
+src="httpsogo.php?clubcode=BBKX88G">
+<h2>AGOVV O14-1</h2>
 </div>
 
 <div class="wedstrijd">
 <div class="datum">Zaterdag 5 september</div>
 
-<div class="regel">
+<div class="teams">
 <span>WSV O14-2</span>
-<span class="tijd">13:00</span>
+<span>-</span>
 <span>AGOVV O14-1</span>
+</div>
+
+<div class="tijd">13:00</div>
+
+<div class="locatie">
+📍 Sportpark De Voorwaarts, Apeldoorn
 </div>
 </div>
 
 <div class="wedstrijd">
 <div class="datum">Zaterdag 12 september</div>
 
-<div class="regel">
+<div class="teams">
 <span>AGOVV O14-1</span>
-<span class="tijd">11:15</span>
+<span>-</span>
 <span>SV CCW'16 O14-1JM</span>
 </div>
+
+<div class="tijd">11:15</div>
+</div>
+
+<div class="wedstrijd">
+<div class="datum">Dinsdag 15 september</div>
+
+<div class="teams">
+<span>AGOVV O14-1</span>
+<span>-</span>
+<span>Robur et Velocitas O14-1</span>
+</div>
+
+<div class="tijd">18:00</div>
 </div>
 
 <a class="knop"
-href="https://9/overzicht"
+href="https://www.voetbal.nl/team/T1590108949/overzicht"
 target="_blank">
 ⚽ Volledig programma
 </a>
