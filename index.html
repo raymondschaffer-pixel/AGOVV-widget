@@ -3,16 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>AGOVV JO14-1</title>
 
 <style>
 
 body{
+    background:#eef3f7;
+    font-family:'Segoe UI',sans-serif;
     margin:0;
     padding:20px;
-    background:#eef3f7;
-    font-family:Segoe UI, Arial, sans-serif;
 }
 
 .container{
@@ -26,39 +25,48 @@ body{
 }
 
 .logo{
-    width:180px;
-    border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    width:220px;
+    max-width:100%;
 }
 
 .teamtitel{
+    color:#0099d8;
     font-size:42px;
     font-weight:800;
-    color:#0099d8;
     margin-top:15px;
 }
 
 .subtitel{
-    font-size:18px;
     color:#666;
+    font-size:18px;
+}
+
+.volgende{
+    border:3px solid #0099d8;
 }
 
 .wedstrijd{
-    background:white;
+    background:#fff;
     border-radius:18px;
-    margin-bottom:25px;
     padding:25px;
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
-    transition:.2s;
+    margin-bottom:20px;
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
 }
 
-.wedstrijd:hover{
-    transform:translateY(-2px);
+.badge{
+    display:inline-block;
+    background:#0099d8;
+    color:white;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:15px;
 }
 
 .datum{
     color:#00a651;
-    font-size:22px;
+    font-size:24px;
     font-weight:700;
     margin-bottom:20px;
 }
@@ -70,34 +78,34 @@ body{
 }
 
 .team{
-    width:35%;
+    width:40%;
     font-size:30px;
     font-weight:700;
 }
 
-.thuis{
+.links{
     text-align:left;
 }
 
-.uit{
+.rechts{
     text-align:right;
 }
 
 .midden{
-    width:30%;
+    width:20%;
     text-align:center;
 }
 
 .vs{
     color:#999;
-    font-size:16px;
+    font-size:14px;
     margin-bottom:5px;
 }
 
 .tijd{
-    font-size:44px;
+    font-size:48px;
     font-weight:800;
-    color:#111;
+    color:#000;
 }
 
 .locatie{
@@ -109,17 +117,17 @@ body{
 .knop{
     display:block;
     text-align:center;
-    padding:18px;
-    border-radius:12px;
     background:#0099d8;
     color:white;
     text-decoration:none;
+    padding:18px;
+    border-radius:12px;
     font-size:20px;
     font-weight:700;
 }
 
 .knop:hover{
-    background:#0083bb;
+    background:#007bb8;
 }
 
 @media(max-width:700px){
@@ -133,23 +141,22 @@ body{
         gap:15px;
     }
 
-    .team,
-    .midden{
+    .team{
         width:100%;
         text-align:center;
+        font-size:24px;
+    }
+
+    .midden{
+        width:100%;
     }
 
     .tijd{
         font-size:36px;
     }
-
-    .team{
-        font-size:24px;
-    }
 }
 
 </style>
-
 </head>
 
 <body>
@@ -158,10 +165,10 @@ body{
 
 <div class="header">
 
-<img srcgo.jpeg
+agovv-logo.jpeg" alt="AGOVV JO14-1">
 
 <div class="teamtitel">
-⚽ AGOVV JO14-1
+AGOVV JO14-1
 </div>
 
 <div class="subtitel">
@@ -170,7 +177,11 @@ Komende wedstrijden
 
 </div>
 
-<div class="wedstrijd">
+<div class="wedstrijd volgende">
+
+<div class="badge">
+VOLGENDE WEDSTRIJD
+</div>
 
 <div class="datum">
 📅 Zaterdag 5 september
@@ -178,7 +189,7 @@ Komende wedstrijden
 
 <div class="teams">
 
-<div class="team thuis">
+<div class="team links">
 WSV O14-2
 </div>
 
@@ -187,7 +198,7 @@ WSV O14-2
 <div class="tijd">13:00</div>
 </div>
 
-<div class="team uit">
+<div class="team rechts">
 AGOVV O14-1
 </div>
 
@@ -207,7 +218,7 @@ AGOVV O14-1
 
 <div class="teams">
 
-<div class="team thuis">
+<div class="team links">
 AGOVV O14-1
 </div>
 
@@ -216,7 +227,7 @@ AGOVV O14-1
 <div class="tijd">11:15</div>
 </div>
 
-<div class="team uit">
+<div class="team rechts">
 SV CCW'16 O14-1JM
 </div>
 
@@ -236,7 +247,7 @@ SV CCW'16 O14-1JM
 
 <div class="teams">
 
-<div class="team thuis">
+<div class="team links">
 AGOVV O14-1
 </div>
 
@@ -245,7 +256,7 @@ AGOVV O14-1
 <div class="tijd">18:00</div>
 </div>
 
-<div class="team uit">
+<div class="team rechts">
 Robur et Velocitas O14-1
 </div>
 
@@ -258,9 +269,10 @@ Robur et Velocitas O14-1
 </div>
 
 <a class="knop"
-href="https://www.voetbal.nl/team/T1590108949/overzicht"
-target="_blank">
+href="https://www">
+
 ⚽ Volledig programma bekijken
+
 </a>
 
 </div>
