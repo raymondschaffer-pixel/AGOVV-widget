@@ -1,60 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 <head>
 <meta charset="UTF-8">
-<title>AGOVV O14-1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGOVV JO14-1</title>
 
 <style>
+
 body{
-    font-family:Arial,sans-serif;
     margin:0;
     padding:15px;
-    background:#fff;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f4f7fa;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
 }
 
 .header{
     text-align:center;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .logo{
-    width:80px;
+    width:140px;
+    height:auto;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
 }
 
-h2{
+.teamnaam{
+    font-size:32px;
+    font-weight:bold;
     color:#0099d8;
-    margin:10px 0;
+    margin-top:10px;
+}
+
+.subtitel{
+    color:#666;
+    margin-top:5px;
 }
 
 .wedstrijd{
-    border:1px solid #ddd;
-    border-radius:10px;
-    padding:15px;
-    margin-bottom:15px;
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
 }
 
 .datum{
     color:#00a651;
+    font-size:18px;
     font-weight:bold;
-    margin-bottom:10px;
+    margin-bottom:15px;
 }
 
 .teams{
     display:flex;
     justify-content:space-between;
-    font-size:18px;
+    align-items:center;
+    gap:15px;
+}
+
+.team{
+    width:40%;
+    font-size:22px;
     font-weight:bold;
 }
 
-.tijd{
+.team.links{
+    text-align:left;
+}
+
+.team.rechts{
+    text-align:right;
+}
+
+.midden{
+    width:20%;
     text-align:center;
-    margin:10px 0;
-    font-size:22px;
+}
+
+.vs{
+    color:#999;
+    font-size:18px;
+}
+
+.tijd{
+    font-size:28px;
+    font-weight:bold;
+    color:#000;
+    margin-top:5px;
 }
 
 .locatie{
-    color:#666;
-    font-size:14px;
+    margin-top:15px;
+    color:#555;
+    font-size:15px;
 }
 
 .knop{
@@ -62,66 +107,140 @@ h2{
     text-align:center;
     background:#0099d8;
     color:white;
-    padding:12px;
-    border-radius:8px;
     text-decoration:none;
+    padding:15px;
+    border-radius:10px;
+    font-weight:bold;
+    font-size:18px;
 }
-</style>
 
+.knop:hover{
+    background:#007db0;
+}
+
+@media (max-width:700px){
+
+    .teams{
+        flex-direction:column;
+    }
+
+    .team,
+    .midden{
+        width:100%;
+        text-align:center;
+    }
+
+    .tijd{
+        margin-top:10px;
+    }
+}
+
+</style>
 </head>
 <body>
 
-<div class="header">
-<img class="logo"
-src="httpsogo.php?clubcode=BBKX88G">
-<h2>AGOVV O14-1</h2>
+<div class="container">
+
+    <div class="header">
+
+        <img src="agovv-jo14-1.jpg<div class="teamnaam">
+            ⚽ AGOVV JO14-1
+        </div>
+
+        <div class="subtitel">
+            Komende wedstrijden
+        </div>
+
+    </div>
+
+    <div class="wedstrijd">
+
+        <div class="datum">
+            Zaterdag 5 september
+        </div>
+
+        <div class="teams">
+
+            <div class="team links">
+                WSV O14-2
+            </div>
+
+            <div class="midden">
+                <div class="vs">VS</div>
+                <div class="tijd">13:00</div>
+            </div>
+
+            <div class="team rechts">
+                AGOVV O14-1
+            </div>
+
+        </div>
+
+        <div class="locatie">
+            📍 Sportpark De Voorwaarts, Apeldoorn
+        </div>
+
+    </div>
+
+    <div class="wedstrijd">
+
+        <div class="datum">
+            Zaterdag 12 september
+        </div>
+
+        <div class="teams">
+
+            <div class="team links">
+                AGOVV O14-1
+            </div>
+
+            <div class="midden">
+                <div class="vs">VS</div>
+                <div class="tijd">11:15</div>
+            </div>
+
+            <div class="team rechts">
+                SV CCW'16 O14-1JM
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="wedstrijd">
+
+        <div class="datum">
+            Dinsdag 15 september
+        </div>
+
+        <div class="teams">
+
+            <div class="team links">
+                AGOVV O14-1
+            </div>
+
+            <div class="midden">
+                <div class="vs">VS</div>
+                <div class="tijd">18:00</div>
+            </div>
+
+            <div class="team rechts">
+                Robur et Velocitas O14-1
+            </div>
+
+        </div>
+
+    </div>
+
+    <a class="knop"
+      /team/T1590108949/overzicht"
+       target="_blank">
+
+        ⚽ Volledig programma bekijken
+
+    </a>
+
 </div>
-
-<div class="wedstrijd">
-<div class="datum">Zaterdag 5 september</div>
-
-<div class="teams">
-<span>WSV O14-2</span>
-<span>-</span>
-<span>AGOVV O14-1</span>
-</div>
-
-<div class="tijd">13:00</div>
-
-<div class="locatie">
-📍 Sportpark De Voorwaarts, Apeldoorn
-</div>
-</div>
-
-<div class="wedstrijd">
-<div class="datum">Zaterdag 12 september</div>
-
-<div class="teams">
-<span>AGOVV O14-1</span>
-<span>-</span>
-<span>SV CCW'16 O14-1JM</span>
-</div>
-
-<div class="tijd">11:15</div>
-</div>
-
-<div class="wedstrijd">
-<div class="datum">Dinsdag 15 september</div>
-
-<div class="teams">
-<span>AGOVV O14-1</span>
-<span>-</span>
-<span>Robur et Velocitas O14-1</span>
-</div>
-
-<div class="tijd">18:00</div>
-</div>
-
-<a class="knop"
-href="https://www.voetbal.nl/team/T1590108949/overzicht"
-target="_blank">
-⚽ Volledig programma
-</a>
 
 </body>
 </html>
