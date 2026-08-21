@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AGOVV JO14-1</title>
 
 <style>
 
 body{
     margin:0;
-    padding:15px;
+    padding:20px;
+    background:#f3f7fa;
     font-family:Arial, Helvetica, sans-serif;
-    background:#f4f7fa;
 }
 
 .container{
@@ -21,21 +23,21 @@ body{
 
 .header{
     text-align:center;
-    margin-bottom:25px;
+    margin-bottom:30px;
 }
 
 .logo{
-    width:140px;
+    width:150px;
     height:auto;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.15);
+    border-radius:15px;
+    box-shadow:0px 4px 10px rgba(0,0,0,0.15);
 }
 
 .teamnaam{
-    font-size:32px;
+    margin-top:15px;
+    font-size:34px;
     font-weight:bold;
     color:#0099d8;
-    margin-top:10px;
 }
 
 .subtitel{
@@ -48,13 +50,13 @@ body{
     border-radius:12px;
     padding:20px;
     margin-bottom:20px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    box-shadow:0px 2px 8px rgba(0,0,0,0.08);
 }
 
 .datum{
-    color:#00a651;
     font-size:18px;
     font-weight:bold;
+    color:#00a651;
     margin-bottom:15px;
 }
 
@@ -62,20 +64,19 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:15px;
 }
 
 .team{
     width:40%;
-    font-size:22px;
+    font-size:20px;
     font-weight:bold;
 }
 
-.team.links{
+.thuis{
     text-align:left;
 }
 
-.team.rechts{
+.uit{
     text-align:right;
 }
 
@@ -86,13 +87,12 @@ body{
 
 .vs{
     color:#999;
-    font-size:18px;
+    font-size:16px;
 }
 
 .tijd{
     font-size:28px;
     font-weight:bold;
-    color:#000;
     margin-top:5px;
 }
 
@@ -111,11 +111,11 @@ body{
     padding:15px;
     border-radius:10px;
     font-weight:bold;
-    font-size:18px;
+    transition:0.3s;
 }
 
 .knop:hover{
-    background:#007db0;
+    background:#0077aa;
 }
 
 @media (max-width:700px){
@@ -124,26 +124,30 @@ body{
         flex-direction:column;
     }
 
-    .team,
-    .midden{
+    .team{
         width:100%;
         text-align:center;
     }
 
-    .tijd{
-        margin-top:10px;
+    .midden{
+        width:100%;
+        margin:10px 0;
     }
 }
 
 </style>
+
 </head>
+
 <body>
 
 <div class="container">
 
     <div class="header">
 
-        <img src="agovv-jo14-1.jpg<div class="teamnaam">
+        <img src="agovv%20logo.jpeg" class="logo14-1 Logo">
+
+        <div class="teamnaam">
             ⚽ AGOVV JO14-1
         </div>
 
@@ -161,7 +165,7 @@ body{
 
         <div class="teams">
 
-            <div class="team links">
+            <div class="team thuis">
                 WSV O14-2
             </div>
 
@@ -170,7 +174,7 @@ body{
                 <div class="tijd">13:00</div>
             </div>
 
-            <div class="team rechts">
+            <div class="team uit">
                 AGOVV O14-1
             </div>
 
@@ -190,7 +194,7 @@ body{
 
         <div class="teams">
 
-            <div class="team links">
+            <div class="team thuis">
                 AGOVV O14-1
             </div>
 
@@ -199,10 +203,14 @@ body{
                 <div class="tijd">11:15</div>
             </div>
 
-            <div class="team rechts">
+            <div class="team uit">
                 SV CCW'16 O14-1JM
             </div>
 
+        </div>
+
+        <div class="locatie">
+            📍 Sportpark Berg & Bos, Apeldoorn
         </div>
 
     </div>
@@ -215,7 +223,7 @@ body{
 
         <div class="teams">
 
-            <div class="team links">
+            <div class="team thuis">
                 AGOVV O14-1
             </div>
 
@@ -224,19 +232,23 @@ body{
                 <div class="tijd">18:00</div>
             </div>
 
-            <div class="team rechts">
+            <div class="team uit">
                 Robur et Velocitas O14-1
             </div>
 
         </div>
 
+        <div class="locatie">
+            📍 Sportpark Berg & Bos, Apeldoorn
+        </div>
+
     </div>
 
     <a class="knop"
-      /team/T1590108949/overzicht"
+       href="https://icht"
        target="_blank">
 
-        ⚽ Volledig programma bekijken
+       ⚽ Volledig programma bekijken
 
     </a>
 
