@@ -2,18 +2,90 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>AGOVV Widget</title>
+<title>AGOVV O14-1</title>
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#fff;
+    margin:0;
+    padding:20px;
+}
+
+.header{
+    text-align:center;
+    color:#0099d8;
+    font-size:26px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.wedstrijd{
+    border-bottom:1px solid #ddd;
+    padding:15px 0;
+}
+
+.datum{
+    color:#00a651;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.regel{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.tijd{
+    font-weight:bold;
+    font-size:20px;
+}
+
+.knop{
+    display:block;
+    text-align:center;
+    background:#0099d8;
+    color:white;
+    padding:12px;
+    border-radius:8px;
+    text-decoration:none;
+    margin-top:20px;
+}
+</style>
 </head>
+
 <body>
 
-<h1>⚽ AGOVV O14-1</h1>
+<div class="header">
+⚽ AGOVV O14-1
+</div>
 
-<p>Dit is mijn eerste widget.</p>
+<div class="wedstrijd">
+<div class="datum">Zaterdag 5 september</div>
 
-<p>
-WSV O14-2 - AGOVV O14-1<br>
-13:00 uur
-</p>
+<div class="regel">
+<span>WSV O14-2</span>
+<span class="tijd">13:00</span>
+<span>AGOVV O14-1</span>
+</div>
+</div>
+
+<div class="wedstrijd">
+<div class="datum">Zaterdag 12 september</div>
+
+<div class="regel">
+<span>AGOVV O14-1</span>
+<span class="tijd">11:15</span>
+<span>SV CCW'16 O14-1JM</span>
+</div>
+</div>
+
+<a class="knop"
+href="https://9/overzicht"
+target="_blank">
+⚽ Volledig programma
+</a>
 
 </body>
 </html>
