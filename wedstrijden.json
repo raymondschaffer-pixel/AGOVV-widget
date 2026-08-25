@@ -1,1 +1,144 @@
-[]
+<style>
+body{
+    margin:0;
+    padding:10px;
+    background:#ffffff;
+    font-family:'Segoe UI', Arial, sans-serif;
+}
+.container{
+    width:100%;
+    max-width:400px;
+    margin:0 auto;
+}
+.header{
+    text-align:center;
+    margin-bottom:20px;
+}
+.teamtitel{
+    color:#0099d8;
+    font-size:24px;
+    font-weight:800;
+    margin-top:12px;
+}
+.subtitel{
+    color:#666;
+    font-size:15px;
+    margin-top:5px;
+}
+.wedstrijd{
+    background:#ffffff;
+    border:3px solid #0099d8;
+    border-radius:18px;
+    padding:20px;
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
+}
+.badge{
+    display:inline-block;
+    background:#0099d8;
+    color:white;
+    padding:6px 12px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+.datum{
+    text-align:center;
+    color:#00a651;
+    font-size:18px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+.team{
+    text-align:center;
+    font-size:20px;
+    font-weight:700;
+    line-height:1.4;
+}
+.vs{
+    text-align:center;
+    color:#888;
+    margin:10px 0;
+}
+.tijd{
+    text-align:center;
+    font-size:52px;
+    font-weight:800;
+    color:#000;
+    margin:10px 0;
+}
+.locatie{
+    text-align:center;
+    font-size:14px;
+    color:#555;
+    margin-top:15px;
+}
+.melding {
+    text-align:center;
+    color:#666;
+    padding:20px;
+    font-size:16px;
+}
+</style>
+
+<div class="container">
+    <div class="header">
+        <div class="teamtitel">AGOVV JO14-1</div>
+        <div class="subtitel">Volgende wedstrijd</div>
+    </div>
+
+    <div id="widget-inhoud">
+        <div class="melding">Wedstrijdgegevens laden...</div>
+    </div>
+</div>
+
+<script>
+// VERVANG ONDERSTAANDE LINK MET JOUW GITHUB RAW JSON URL
+const jsonUrl = '[JOUW_RAW_GITHUB_URL]';
+
+fetch(jsonUrl)
+    .then(response => response.json())
+    .then(data => {
+        const vandaag = new Date();
+        vandaag.setHours(0,0,0,0);
+
+        // Filter wedstrijden die vandaag of in de toekomst vallen
+        const toekomstigeWedstrijden = data.filter(w => new Date(w.datum) >= vandaag);
+        
+        // Sorteer op datum (vroegste eerst)
+        toekomstigeWedstrijden.sort((a, b) => new Date(a.datum) - new Date(b.datum));
+
+        const container = document.getElementById('widget-inhoud');
+
+        if (toekomstigeWedstrijden.length > 0) {
+            const w = toekomstigeWedstrijden[0];
+            
+            // Zet datum netjes leesbaar (bijv. "Zaterdag 30 augustus 2026")
+            const datumObj = new Date(w.datum);
+            const opties = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const datumTekst = datumObj.toLocaleDateString('nl-NL', opties);
+            // Eerste letter hoofdletter maken
+            const formattedDatum = datumTekst.charAt(0).toUpperCase() + datumTekst.slice(1);
+
+            container.innerHTML = `
+                <div class="wedstrijd">
+                    <div style="text-align:center;">
+                        <span class="badge">${w.type}</span>
+                    </div>
+                    <div class="datum">${formattedDatum}</div>
+                    <div class="team">AGOVV JO14-1</div>
+                    <div class="vs">VS</div>
+                    <div class="team">${w.tegenstander}</div>
+                    <div class="tijd">${w.tijd}</div>
+                    <div class="locatie">${w.locatie.replace('\n', '<br>')}</div>
+                </div>
+            `;
+        } else {
+            container.innerHTML = `<div class="wedstrijd"><div class="team">Geen aankomende wedstrijden gevonden</div></div>`;
+        }
+    })
+    .catch(error => {
+        console.error('Fout bij laden:', error);
+        document.getElementById('widget-inhoud').innerHTML = `<div class="wedstrijd"><div class="team">Kon wedstrijden niet laden</div></div>`;
+    });
+</script>
