@@ -36,6 +36,7 @@ body{
     border-radius:18px;
     padding:20px;
     box-shadow:0 4px 14px rgba(0,0,0,.08);
+    margin-bottom:20px;
 }
 
 .badge{
@@ -87,43 +88,78 @@ body{
 </style>
 
 <div class="container">
-
     <div class="header">
         <div class="teamtitel">AGOVV JO14-1</div>
-        <div class="subtitel">Volgende wedstrijd</div>
+        <div class="subtitel">Komende wedstrijden</div>
     </div>
 
-    <div class="wedstrijd">
-
-        <div style="text-align:center;">
-            <span class="badge">COMPETITIE</span>
-        </div>
-
-        <div class="datum">
-            Zaterdag 23 augustus 2026
-        </div>
-
-        <div class="team">
-            AGOVV JO14-1
-        </div>
-
-        <div class="vs">
-            VS
-        </div>
-
-        <div class="team">
-            Tegenstander
-        </div>
-
-        <div class="tijd">
-            10:30
-        </div>
-
-        <div class="locatie">
-            Sportpark AGOVV<br>
-            Apeldoorn
-        </div>
-
+    <div id="wedstrijden-lijst">
+        <!-- Hier worden de wedstrijden automatisch ingeladen -->
     </div>
-
 </div>
+
+<script>
+async function laadWedstrijden() {
+    try {
+        // Vervang de URL hieronder door de echte raw GitHub URL van je wedstrijden.json bestand
+        const response = await fetch('https://raw.githubusercontent.com/JOUW-GEBRUIKERSNAAM/JOUW-REPO/main/wedstrijden.json');
+        const wedstrijden = await response.json();
+        
+        const vandaag = new Date();
+        vandaag.setHours(0,0,0,0);
+
+        // Filter wedstrijden die in de toekomst liggen en pak er maximaal 2
+        const komendeWedstrijden = wedstrijden
+            .filter(w => new Date(w.datum) >= vandaag)
+            .slice(0, 2);
+
+        const container = document.getElementById('wedstrijden-lijst');
+        container.innerHTML = '';
+
+        if (komendeWedstrijden.length === 0) {
+            container.innerHTML = '<div style="text-align:center; color:#666;">Geen aankomende wedstrijden gevonden.</div>';
+            return;
+        }
+
+        komendeWedstrijden.forEach(w => {
+            // Datum netjes formatteren (bijv. Zaterdag 29 augustus 2026)
+            const opties = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const datumStr = new Date(w.datum).toLocaleDateString('nl-NL', opties);
+            // Eerste letter hoofdletter maken
+            const formattedDatum = datumStr.charAt(0).toUpperCase() + datumStr.slice(1);
+
+            const html = `
+                <div class="wedstrijd">
+                    <div style="text-align:center;">
+                        <span class="badge">${w.type}</span>
+                    </div>
+                    <div class="datum">
+                        ${formattedDatum}
+                    </div>
+                    <div class="team">
+                        AGOVV JO14-1
+                    </div>
+                    <div class="vs">
+                        VS
+                    </div>
+                    <div class="team">
+                        ${w.tegenstander}
+                    </div>
+                    <div class="tijd">
+                        ${w.tijd}
+                    </div>
+                    <div class="locatie">
+                        ${w.locatie.replace(', ', '<br>')}
+                    </div>
+                </div>
+            `;
+            container.innerHTML += html;
+        });
+
+    } catch (error) {
+        console.error('Fout bij laden wedstrijden:', error);
+    }
+}
+
+laadWedstrijden();
+</script>
