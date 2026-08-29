@@ -1,10 +1,8 @@
-[
-    { "voornaam": "Sam", "item": "Trainingsbroek", "nummer": "180" },
-    { "voornaam": "Sam", "item": "Trainingsjack", "nummer": "196" },
-    { "voornaam": "Sam", "item": "Broek", "nummer": "693" },
-    { "voornaam": "Sam", "item": "Shirt", "nummer": "613" },
-    { "voornaam": "Test", "item": "Trainingsbroek", "nummer": "123" },
-    { "voornaam": "Test", "item": "Trainingsjack", "nummer": "321" },
-    { "voornaam": "Test", "item": "Broek", "nummer": "456" },
-    { "voornaam": "Test", "item": "Shirt", "nummer": "789" }
-]
+{ “naam”: “Sam”, “item”: “Trainingsbroek”, “nummer”: “180” },
+    { “naam”: “Sam”, “item”: “Trainingsjack”, “nummer”: “196” },
+    { “naam”: “Sam”, “item”: “Broek”, “nummer”: “693” },
+    { “naam”: “Sam”, “item”: “Shirt”, “nummer”: “613” },
+    { “naam”: “Test”, “item”: “Trainingsbroek”, “nummer”: “123” },
+    { “naam”: “Test”, “item”: “Trainingsjack”, “nummer”: “321” },
+    { “naam”: “Test”, “item”: “Broek”, “nummer”: “456” },
+    { “naam”: “Test”, “item”: “Shirt”, “nummer”: “789” }
