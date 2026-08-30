@@ -1,7 +1,15 @@
-# Overzicht Gevonden Kleding
+# Overzicht Kleding
 
 | Naam | Item | Nummer |
 | :--- | :--- | :--- |
+| Sam | Trainingsbroek | 180 |
+| Sam | Trainingsjack | 196 |
+| Sam | Broek | 693 |
+| Sam | Shirt | 613 |
+| Test | Trainingsbroek | 123 |
+| Test | Trainingsjack | 321 |
+| Test | Broek | 456 |
+| Test | Shirt | 789 |
 | Maxim | Trainingsbroek | - |
 | Maxim | Trainingsjack | - |
 | Maxim | Broek | - |
