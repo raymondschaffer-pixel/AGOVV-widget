@@ -5,5 +5,7 @@
 - Graag kledingnummers doorgeven (Knop AGOVV kledingnummers)
 - Scorebord laatste uitslag toegevoegd
 - Ruilknop vlagdienst knop is actief
+- KNVB infographic JO14 Cat. A toegevoegd aan Documenten
+
 
 Datum laatste update: Vandaag
