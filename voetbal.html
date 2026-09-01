@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGOVV Teamstatistieken</title>
+    
+    <!-- jQuery en de officiële Sportlink JavaScript bibliotheek -->
+    <script src="https://jquery.com"></script>
+    <script src="https://github.io"></script>
+    
+    <script>
+        // Initialiseer Sportlink met de gegevens van de club
+        // VERVANG 'JOUW_CLIENT_ID' door de API-sleutel van de club (via de webmaster)
+        feed.init({
+            clientId: "JOUW_CLIENT_ID" 
+        });
+    </script>
+
+    <style>
+        /* Basis styling voor een strakke weergave in Google Sites */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 15px;
+            background-color: #ffffff;
+            color: #333333;
+        }
+        h3 {
+            color: #0056b3; /* Pas dit eventueel aan naar de clubkleur (blauw/geel van AGOVV) */
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        h3:first-of-type {
+            margin-top: 0;
+        }
+        /* Styling die automatisch wordt toegepast op de Sportlink tabellen */
+        .sclink-table {
+            width: 100% !important;
+            border-collapse: collapse !important;
+            margin-bottom: 20px;
+        }
+        .sclink-table th {
+            background-color: #f8f9fa !important;
+            color: #495057 !important;
+            font-weight: 600;
+            text-align: left;
+            padding: 10px !important;
+            border-bottom: 2px solid #dee2e6 !important;
+        }
+        .sclink-table td {
+            padding: 10px !important;
+            border-bottom: 1px solid #dee2e6 !important;
+            font-size: 14px;
+        }
+        .sclink-table tr:hover {
+            background-color: #f1f3f5;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Actuele Stand</h3>
+    <!-- Toont de stand van de competitie. VERVANG 'JOUW_TEAMCODE' -->
+    <div class="sclink-widget-poule-stand" data-teamcode="JOUW_TEAMCODE"></div>
+
+    <h3>Wedstrijdprogramma</h3>
+    <!-- Toont de komende wedstrijden van het team. VERVANG 'JOUW_TEAMCODE' -->
+    <div class="sclink-widget-team-programma" data-teamcode="JOUW_TEAMCODE"></div>
+
+    <h3>Recente Uitslagen</h3>
+    <!-- Toont de laatst gespeelde wedstrijden. VERVANG 'JOUW_TEAMCODE' -->
+    <div class="sclink-widget-team-uitslagen" data-teamcode="JOUW_TEAMCODE"></div>
+
+</body>
+</html>
