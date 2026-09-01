@@ -4,6 +4,6 @@
 - Vlagschema widget staat op de site
 - Graag kledingnummers doorgeven (Knop AGOVV kledingnummers)
 - Scorebord laatste uitslag toegevoegd
-
+- Ruilknop vlagdienst knop is actief
 
 Datum laatste update: Vandaag
