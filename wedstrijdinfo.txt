@@ -1,8 +1,8 @@
-WSV O14-2
-AGOVV O14-1
-Aanvang 13:00
-Aanwezig 12:00
+AGOVV JO14-1
+WSV JO14-2
+Training maandag 16:30-17:45 - dinsdag 16:45-18:00 - donderdag 16:45-18:00
+AGOVV alleen gezamenlijk oefenen voert verder
 2
-5
-Veld 4
-Kleedkamer 6-R
+6
+Wedstrijdinfo: Spelers aanwezig 12:00 | Aanvang wedstrijd 13:00
+Sportpark de Voorwaarts Veld 4 Kleedkamer 6-R
