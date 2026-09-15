@@ -1,11 +1,11 @@
 [
   {
-    "datum": "2026-09-13",
+    "datum": "2026-09-15",
     "type": "Competitie",
-    "tegenstander": "CV CCW O14-1JM",
+    "tegenstander": "ROBUR ET VELOCITAS JO14-1",
     "status": "volgende wedstrijd",
-    "scoreThuis": 1,
-    "scoreUit": 4,
+    "scoreThuis": 0,
+    "scoreUit": 0,
     "locatie": "Sportpark Berg en Bos, Apeldoorn"
   }
 ]
