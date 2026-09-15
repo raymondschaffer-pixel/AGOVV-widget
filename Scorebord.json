@@ -3,9 +3,9 @@
     "datum": "2026-09-15",
     "type": "Competitie",
     "tegenstander": "ROBUR ET VELOCITAS JO14-1",
-    "status": "volgende wedstrijd",
-    "scoreThuis": 0,
-    "scoreUit": 0,
+    "status": "einde wedstrijd",
+    "scoreThuis": 2,
+    "scoreUit": 1,
     "locatie": "Sportpark Berg en Bos, Apeldoorn"
   }
 ]
