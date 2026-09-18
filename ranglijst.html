@@ -34,6 +34,14 @@
             position: relative;
             z-index: 2;
         }
+        /* Animatie voor de update knop */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .spinning {
+            animation: spin 0.8s linear infinite;
+        }
     </style>
 </head>
 <body class="max-w-md mx-auto">
@@ -42,7 +50,14 @@
         <div class="content-layer">
             <div class="bg-blue-900 text-white px-3 py-2 font-bold text-sm flex justify-between items-center shadow-sm">
                 <span>🏆 Stand Hoofdklasse JO14</span>
-                <span class="text-[9px] bg-blue-700 px-1.5 py-0.5 rounded uppercase tracking-wider">Handmatig</span>
+                
+                <!-- Interactieve Update Knop -->
+                <button onclick="verversStand()" id="updateBtn" class="bg-blue-700 hover:bg-blue-600 text-white text-[10px] px-2.5 py-1 rounded-md uppercase tracking-wider font-semibold transition flex items-center gap-1 shadow-sm cursor-pointer">
+                    <svg id="updateIcoon" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.63-5.38"></path>
+                    </svg>
+                    Update
+                </button>
             </div>
             
             <div class="overflow-x-auto">
@@ -57,6 +72,7 @@
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-gray-100/80">
+                        <!-- Pas hieronder wekelijks simpel de cijfers aan na de speelronde (G - Ptn - Saldo) -->
                         <tr class="hover:bg-gray-50/50">
                             <td class="py-1.5 px-2 font-semibold text-gray-600">1</td>
                             <td class="py-1.5 px-2 font-medium text-gray-800">ESA 014-1</td>
@@ -105,5 +121,20 @@
         </div>
     </div>
 
+    <script>
+        function verversStand() {
+            const icoon = document.getElementById('updateIcoon');
+            const btn = document.getElementById('updateBtn');
+            
+            // Laat de knop even draaien als teken van actie
+            icoon.classList.add('spinning');
+            btn.style.opacity = '0.8';
+
+            setTimeout(() => {
+                // Herlaadt de pagina en dwingt de browser om verse data op te halen (omzeilt cache)
+                window.location.reload(true);
+            }, 600);
+        }
+    </script>
 </body>
 </html>
