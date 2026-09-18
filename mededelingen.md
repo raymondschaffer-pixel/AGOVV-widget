@@ -2,7 +2,7 @@
 
 - Zaterdag 09:00 bij AGOVV verzamelen
 - Zaterdag 10 oktober oefenwedstrijd CVJJ JO14-1 om 10.30 veld 4
--Tweede plaats en 3 punten na derby tegen Robur er Velocitas JO14-1
+- Ranglijst toegevoegd op website
 -wie oh wie heeft Trainingsjack 624
 - Trainingstijd maandag aangepast
 - Oefenwedstrijd zaterdag 26-9 uit tegen SV Epe JO14-1 Start 13.30
