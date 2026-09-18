@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stand & Programma JO14-1</title>
+    <title>Stand Hoofdklasse JO14-1</title>
     <!-- Tailwind CSS voor een strak uiterlijk -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- iCal.js bibliotheek om de agenda te parsen -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.5.0/ical.min.js"></script>
     <style>
         body {
             background-color: transparent;
@@ -17,9 +15,9 @@
         }
     </style>
 </head>
-<body class="max-w-md mx-auto space-y-5">
+<body class="max-w-md mx-auto">
 
-    <!-- SECTIE 1: STANDENLIJST -->
+    <!-- SECTIE: STANDENLIJST -->
     <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
         <div class="bg-blue-900 text-white px-4 py-3 font-bold text-base flex justify-between items-center">
             <span>🏆 Stand Hoofdklasse JO14</span>
@@ -86,83 +84,5 @@
         </div>
     </div>
 
-    <!-- SECTIE 2: PROGRAMMA VIA ICAL -->
-    <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
-        <div class="bg-blue-900 text-white px-4 py-3 font-bold text-base flex justify-between items-center">
-            <span>📅 Programma JO14-1</span>
-            <span class="text-[10px] bg-blue-700 px-2 py-0.5 rounded uppercase tracking-wider">Live iCal</span>
-        </div>
-        
-        <div id="agenda-list" class="divide-y divide-gray-100 p-4 text-sm">
-            <p class="text-gray-500 text-center py-2 text-xs">Agenda inladen...</p>
-        </div>
-    </div>
-
-    <script>
-        const ICAL_URL = 'https://data.sportlink.com/ical-team?token=lpf6dfk6m1uv2o6uno5m0i4b3n'; 
-
-        async function loadCalendar() {
-            const container = document.getElementById('agenda-list');
-
-            try {
-                const proxyUrl = `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(ICAL_URL)}`;
-                const response = await fetch(proxyUrl);
-                
-                if (!response.ok) throw new Error("Kon data niet ophalen");
-                const icalText = await response.text();
-                
-                if (!icalText.includes('BEGIN:VCALENDAR')) {
-                    throw new Error("Geen geldige iCal data ontvangen");
-                }
-
-                const jcalData = ICAL.parse(icalText);
-                const vcalendar = new ICAL.Component(jcalData);
-                const events = vcalendar.getAllSubcomponents('vevent');
-
-                const now = new Date();
-                let html = '';
-                let count = 0;
-
-                const parsedEvents = events.map(e => {
-                    const event = new ICAL.Event(e);
-                    return {
-                        summary: event.summary,
-                        startDate: event.startDate.toJSDate(),
-                        location: event.location || 'Locatie n.t.b.'
-                    }
-                }).sort((a, b) => a.startDate - b.startDate);
-
-                for (const ev of parsedEvents) {
-                    if (ev.startDate >= new Date(now.getTime() - 86400000) && count < 5) {
-                        const dateStr = ev.startDate.toLocaleDateString('nl-NL', { weekday: 'short', day: 'numeric', month: 'short' });
-                        const timeStr = ev.startDate.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' });
-
-                        html += `
-                            <div class="py-2.5 flex flex-col justify-between border-b border-gray-100 last:border-b-0">
-                                <div class="flex justify-between items-center mb-0.5">
-                                    <span class="text-[11px] font-semibold text-blue-600 uppercase tracking-wider">${dateStr} om ${timeStr}</span>
-                                </div>
-                                <div class="text-gray-800 font-bold text-xs sm:text-sm mb-1">${ev.summary}</div>
-                                <div class="text-gray-400 text-[11px] flex items-center">📍 ${ev.location}</div>
-                            </div>
-                        `;
-                        count++;
-                    }
-                }
-
-                if (html === '') {
-                    container.innerHTML = `<p class="text-gray-500 text-xs text-center py-2">Geen aankomende wedstrijden gevonden.</p>`;
-                } else {
-                    container.innerHTML = html;
-                }
-
-            } catch (error) {
-                console.error(error);
-                container.innerHTML = `<p class="text-red-500 text-xs text-center py-2">Fout bij het laden van het iCal-programma.</p>`;
-            }
-        }
-
-        loadCalendar();
-    </script>
 </body>
 </html>
