@@ -105,13 +105,17 @@
             const container = document.getElementById('agenda-list');
 
             try {
-                const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(ICAL_URL)}`;
+                const proxyUrl = `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(ICAL_URL)}`;
                 const response = await fetch(proxyUrl);
-                const data = await response.json();
                 
-                if (!data.contents) throw new Error("Kon data niet ophalen");
+                if (!response.ok) throw new Error("Kon data niet ophalen");
+                const icalText = await response.text();
+                
+                if (!icalText.includes('BEGIN:VCALENDAR')) {
+                    throw new Error("Geen geldige iCal data ontvangen");
+                }
 
-                const jcalData = ICAL.parse(data.contents);
+                const jcalData = ICAL.parse(icalText);
                 const vcalendar = new ICAL.Component(jcalData);
                 const events = vcalendar.getAllSubcomponents('vevent');
 
