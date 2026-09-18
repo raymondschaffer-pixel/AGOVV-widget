@@ -1,0 +1,20 @@
+{
+  "name": "AGOVV JO14-1 Portaal",
+  "short_name": "AGOVV JO14-1",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#1e3a8a",
+  "icons": [
+    {
+      "src": "https://cdn.jsdelivr.net/gh/raymondschaffer-pixel/AGOVV-widget@main/agovv-logo.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https://cdn.jsdelivr.net/gh/raymondschaffer-pixel/AGOVV-widget@main/agovv-logo.jpeg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
