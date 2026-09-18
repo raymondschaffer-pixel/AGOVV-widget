@@ -5,29 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGOVV JO14-1</title>
     
-    <!-- Dit zorgt ervoor dat je telefoon het AGOVV-logo pakt als app-icoon -->
+    <!-- Het AGOVV-logo voor je startscherm -->
     <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/raymondschaffer-pixel/AGOVV-widget@main/agovv-logo.jpeg">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-    <!-- Dit stuurt je direct door naar je echte website -->
-    <meta http-equiv="refresh" content="0; url=https://www.rayregelthetwel.nl">
-    
-    <style>
-        body {
-            background-color: #0f172a;
-            color: white;
-            font-family: sans-serif;
-            text-align: center;
-            padding-top: 50px;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <p>AGOVV portaal laden...</p>
-    <script>
-        // Direct doorsturen voor de zekerheid
-        window.location.href = "https://www.rayregelthetwel.nl";
-    </script>
+<body class="bg-slate-900 text-white flex flex-col items-center justify-center min-h-screen p-6 font-sans">
+
+    <div class="bg-slate-800 border border-slate-700 p-6 rounded-2xl shadow-xl max-w-xs w-full text-center">
+        <img src="https://cdn.jsdelivr.net/gh/raymondschaffer-pixel/AGOVV-widget@main/agovv-logo.jpeg" alt="AGOVV Logo" class="w-20 h-20 mx-auto rounded-xl mb-4 object-cover shadow-md">
+        <h1 class="text-lg font-bold mb-2">AGOVV JO14-1</h1>
+        <p class="text-xs text-slate-400 mb-6">Zet deze pagina op je beginscherm voor het juiste app-icoon!</p>
+        
+        <a href="https://www.rayregelthetwel.nl" class="block w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2.5 px-4 rounded-xl shadow transition text-sm">
+            Open Portaal Direct
+        </a>
+    </div>
+
 </body>
 </html>
