@@ -4,80 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stand Hoofdklasse JO14-1</title>
-    <!-- Tailwind CSS voor een strak uiterlijk -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             background-color: transparent;
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
-            padding: 10px;
+            padding: 5px;
         }
     </style>
 </head>
 <body class="max-w-md mx-auto">
 
-    <!-- SECTIE: STANDENLIJST -->
-    <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
-        <div class="bg-blue-900 text-white px-4 py-3 font-bold text-base flex justify-between items-center">
+    <div class="bg-white shadow-md rounded-xl overflow-hidden border border-gray-100">
+        <div class="bg-blue-900 text-white px-3 py-2 font-bold text-sm flex justify-between items-center">
             <span>🏆 Stand Hoofdklasse JO14</span>
-            <span class="text-[10px] bg-blue-700 px-2 py-0.5 rounded uppercase tracking-wider">Handmatig</span>
+            <span class="text-[9px] bg-blue-700 px-1.5 py-0.5 rounded uppercase tracking-wider">Handmatig</span>
         </div>
         
         <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <table class="w-full text-left border-collapse text-xs">
                 <thead>
-                    <tr class="bg-gray-50 text-gray-500 border-b border-gray-100 uppercase text-[10px]">
-                        <th class="py-2 px-3">#</th>
-                        <th class="py-2 px-3">Team</th>
-                        <th class="py-2 px-3 text-center">G</th>
-                        <th class="py-2 px-3 text-center">Ptn</th>
-                        <th class="py-2 px-3 text-center">Saldo</th>
+                    <tr class="bg-gray-50 text-gray-500 border-b border-gray-100 uppercase text-[9px]">
+                        <th class="py-1.5 px-2">#</th>
+                        <th class="py-1.5 px-2">Team</th>
+                        <th class="py-1.5 px-2 text-center">G</th>
+                        <th class="py-1.5 px-2 text-center">Ptn</th>
+                        <th class="py-1.5 px-2 text-center">Saldo</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100">
-                    <!-- Pas hieronder wekelijks simpel de cijfers aan na de speelronde -->
+                    <!-- Pas hieronder wekelijks simpel de cijfers aan na de speelronde (G - Ptn - Saldo) -->
                     <tr class="hover:bg-gray-50">
-                        <td class="py-2 px-3 font-semibold text-gray-600">1</td>
-                        <td class="py-2 px-3 font-medium text-gray-800">ESA 014-1</td>
-                        <td class="py-2 px-3 text-center text-gray-600">2</td>
-                        <td class="py-2 px-3 text-center font-bold text-blue-900">6</td>
-                        <td class="py-2 px-3 text-center text-green-600">+6</td>
+                        <td class="py-1.5 px-2 font-semibold text-gray-600">1</td>
+                        <td class="py-1.5 px-2 font-medium text-gray-800">ESA 014-1</td>
+                        <td class="py-1.5 px-2 text-center text-gray-600">2</td>
+                        <td class="py-1.5 px-2 text-center font-bold text-blue-900">6</td>
+                        <td class="py-1.5 px-2 text-center text-green-600">+6</td>
                     </tr>
                     <tr class="hover:bg-gray-50 bg-blue-50/50">
-                        <td class="py-2 px-3 font-semibold text-gray-600">2</td>
-                        <td class="py-2 px-3 font-bold text-blue-900">AGOVV 014-1</td>
-                        <td class="py-2 px-3 text-center text-gray-600">3</td>
-                        <td class="py-2 px-3 text-center font-bold text-blue-900">6</td>
-                        <td class="py-2 px-3 text-center text-green-600">+2</td>
+                        <td class="py-1.5 px-2 font-semibold text-gray-600">2</td>
+                        <td class="py-1.5 px-2 font-bold text-blue-900">AGOVV 014-1</td>
+                        <td class="py-1.5 px-2 text-center text-gray-600">3</td>
+                        <td class="py-1.5 px-2 text-center font-bold text-blue-900">6</td>
+                        <td class="py-1.5 px-2 text-center text-green-600">+2</td>
                     </tr>
                     <tr class="hover:bg-gray-50">
-                        <td class="py-2 px-3 font-semibold text-gray-600">3</td>
-                        <td class="py-2 px-3 font-medium text-gray-800">Robur e.s 014-1</td>
-                        <td class="py-2 px-3 text-center text-gray-600">3</td>
-                        <td class="py-2 px-3 text-center font-bold text-blue-900">6</td>
-                        <td class="py-2 px-3 text-center text-green-600">+1</td>
+                        <td class="py-1.5 px-2 font-semibold text-gray-600">3</td>
+                        <td class="py-1.5 px-2 font-medium text-gray-800">Robur e.s 014-1</td>
+                        <td class="py-1.5 px-2 text-center text-gray-600">3</td>
+                        <td class="py-1.5 px-2 text-center font-bold text-blue-900">6</td>
+                        <td class="py-1.5 px-2 text-center text-green-600">+1</td>
                     </tr>
                     <tr class="hover:bg-gray-50">
-                        <td class="py-2 px-3 font-semibold text-gray-600">4</td>
-                        <td class="py-2 px-3 font-medium text-gray-800">SV CCW '16 014-1JM</td>
-                        <td class="py-2 px-3 text-center text-gray-600">2</td>
-                        <td class="py-2 px-3 text-center font-bold text-blue-900">3</td>
-                        <td class="py-2 px-3 text-center text-green-600">+2</td>
+                        <td class="py-1.5 px-2 font-semibold text-gray-600">4</td>
+                        <td class="py-1.5 px-2 font-medium text-gray-800">SV CCW '16 014-1JM</td>
+                        <td class="py-1.5 px-2 text-center text-gray-600">2</td>
+                        <td class="py-1.5 px-2 text-center font-bold text-blue-900">3</td>
+                        <td class="py-1.5 px-2 text-center text-green-600">+2</td>
                     </tr>
                     <tr class="hover:bg-gray-50">
-                        <td class="py-2 px-3 font-semibold text-gray-600">5</td>
-                        <td class="py-2 px-3 font-medium text-gray-800">FC Zutphen 014-1JM</td>
-                        <td class="py-2 px-3 text-center text-gray-600">2</td>
-                        <td class="py-2 px-3 text-center font-bold text-blue-900">0</td>
-                        <td class="py-2 px-3 text-center text-red-500">-5</td>
+                        <td class="py-1.5 px-2 font-semibold text-gray-600">5</td>
+                        <td class="py-1.5 px-2 font-medium text-gray-800">FC Zutphen 014-1JM</td>
+                        <td class="py-1.5 px-2 text-center text-gray-600">2</td>
+                        <td class="py-1.5 px-2 text-center font-bold text-blue-900">0</td>
+                        <td class="py-1.5 px-2 text-center text-red-500">-5</td>
                     </tr>
                     <tr class="hover:bg-gray-50">
-                        <td class="py-2 px-3 font-semibold text-gray-600">6</td>
-                        <td class="py-2 px-3 font-medium text-gray-800">WSV 014-2</td>
-                        <td class="py-2 px-3 text-center text-gray-600">2</td>
-                        <td class="py-2 px-3 text-center font-bold text-blue-900">0</td>
-                        <td class="py-2 px-3 text-center text-red-500">-6</td>
+                        <td class="py-1.5 px-2 font-semibold text-gray-600">6</td>
+                        <td class="py-1.5 px-2 font-medium text-gray-800">WSV 014-2</td>
+                        <td class="py-1.5 px-2 text-center text-gray-600">2</td>
+                        <td class="py-1.5 px-2 text-center font-bold text-blue-900">0</td>
+                        <td class="py-1.5 px-2 text-center text-red-500">-6</td>
                     </tr>
                 </tbody>
             </table>
