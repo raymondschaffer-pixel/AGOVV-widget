@@ -49,7 +49,7 @@
                     <tr class="hover:bg-gray-50 bg-blue-50/50">
                         <td class="py-2 px-3 font-semibold text-gray-600">2</td>
                         <td class="py-2 px-3 font-bold text-blue-900">AGOVV 014-1</td>
-                        <td class="py-2.5 px-3 text-center text-gray-600">3</td>
+                        <td class="py-2 px-3 text-center text-gray-600">3</td>
                         <td class="py-2 px-3 text-center font-bold text-blue-900">6</td>
                         <td class="py-2 px-3 text-center text-green-600">+2</td>
                     </tr>
@@ -94,7 +94,7 @@
         </div>
         
         <div id="agenda-list" class="divide-y divide-gray-100 p-4 text-sm">
-            <p class="text-gray-500 text-center py-2">Agenda inladen...</p>
+            <p class="text-gray-500 text-center py-2 text-xs">Agenda inladen...</p>
         </div>
     </div>
 
@@ -134,7 +134,7 @@
                         const timeStr = ev.startDate.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' });
 
                         html += `
-                            <div class="py-2.5 flex flex-col justify-between">
+                            <div class="py-2.5 flex flex-col justify-between border-b border-gray-100 last:border-b-0">
                                 <div class="flex justify-between items-center mb-0.5">
                                     <span class="text-[11px] font-semibold text-blue-600 uppercase tracking-wider">${dateStr} om ${timeStr}</span>
                                 </div>
@@ -147,14 +147,14 @@
                 }
 
                 if (html === '') {
-                    container.innerHTML = `<p class="text-gray-500 text-xs text-center">Geen aankomende wedstrijden gevonden.</p>`;
+                    container.innerHTML = `<p class="text-gray-500 text-xs text-center py-2">Geen aankomende wedstrijden gevonden.</p>`;
                 } else {
                     container.innerHTML = html;
                 }
 
             } catch (error) {
                 console.error(error);
-                container.innerHTML = `<p class="text-red-500 text-xs text-center">Fout bij het laden van het iCal-programma.</p>`;
+                container.innerHTML = `<p class="text-red-500 text-xs text-center py-2">Fout bij het laden van het iCal-programma.</p>`;
             }
         }
 
