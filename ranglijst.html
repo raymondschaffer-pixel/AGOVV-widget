@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGOVV JO14-1 - Programma & Stand</title>
+    <!-- Tailwind CSS voor een strak uiterlijk -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- iCal.js bibliotheek om de agenda te parsen -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ical.js/1.5.0/ical.min.js"></script>
+</head>
+<body class="bg-transparent p-4 font-sans max-w-lg mx-auto space-y-6">
+
+    <!-- SECTIE 1: STANDENLIJST -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
+        <div class="bg-blue-900 text-white px-4 py-3 font-bold text-lg flex justify-between items-center">
+            <span>🏆 Stand Hoofdklasse JO14</span>
+            <span class="text-xs bg-blue-700 px-2 py-1 rounded">Handmatig</span>
+        </div>
+        
+        <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse text-sm">
+                <thead>
+                    <tr class="bg-gray-50 text-gray-500 border-b border-gray-100 text-xs uppercase">
+                        <th class="py-2.5 px-3">#</th>
+                        <th class="py-2.5 px-3">Team</th>
+                        <th class="py-2.5 px-3 text-center">G</th>
+                        <th class="py-2.5 px-3 text-center">Ptn</th>
+                        <th class="py-2.5 px-3 text-center">Saldo</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100" id="standing-table">
+                    <!-- Pas hieronder wekelijks simpel de cijfers aan na de speelronde -->
+                    <tr class="hover:bg-gray-50">
+                        <td class="py-2.5 px-3 font-semibold text-gray-600">1</td>
+                        <td class="py-2.5 px-3 font-medium text-gray-800">ESA 014-1</td>
+                        <td class="py-2.5 px-3 text-center text-gray-600">2</td>
+                        <td class="py-2.5 px-3 text-center font-bold text-blue-900">6</td>
+                        <td class="py-2.5 px-3 text-center text-green-600">+6</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 bg-blue-50/50">
+                        <td class="py-2.5 px-3 font-semibold text-gray-600">2</td>
+                        <td class="py-2.5 px-3 font-bold text-blue-900">AGOVV 014-1</td>
+                        <td class="py-2.5 px-3 text-center text-gray-600">3</td>
+                        <td class="py-2.5 px-3 text-center font-bold text-blue-900">6</td>
+                        <td class="py-2.5 px-3 text-center text-green-600">+2</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="py-2.5 px-3 font-semibold text-gray-600">3</td>
+                        <td class="py-2.5 px-3 font-medium text-gray-800">Robur e.s 014-1</td>
+                        <td class="py-2.5 px-3 text-center text-gray-600">3</td>
+                        <td class="py-2.5 px-3 text-center font-bold text-blue-900">6</td>
+                        <td class="py-2.5 px-3 text-center text-green-600">+1</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="py-2.5 px-3 font-semibold text-gray-600">4</td>
+                        <td class="py-2.5 px-3 font-medium text-gray-800">SV CCW '16 014-1JM</td>
+                        <td class="py-2.5 px-3 text-center text-gray-600">2</td>
+                        <td class="py-2.5 px-3 text-center font-bold text-blue-900">3</td>
+                        <td class="py-2.5 px-3 text-center text-green-600">+2</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="py-2.5 px-3 font-semibold text-gray-600">5</td>
+                        <td class="py-2.5 px-3 font-medium text-gray-800">FC Zutphen 014-1JM</td>
+                        <td class="py-2.5 px-3 text-center text-gray-600">2</td>
+                        <td class="py-2.5 px-3 text-center font-bold text-blue-900">0</td>
+                        <td class="py-2.5 px-3 text-center text-red-500">-5</td>
+                    </tr>
+                    <tr class="hover:bg-gray-50">
+                        <td class="py-2.5 px-3 font-semibold text-gray-600">6</td>
+                        <td class="py-2.5 px-3 font-medium text-gray-800">WSV 014-2</td>
+                        <td class="py-2.5 px-3 text-center text-gray-600">2</td>
+                        <td class="py-2.5 px-3 text-center font-bold text-blue-900">0</td>
+                        <td class="py-2.5 px-3 text-center text-red-500">-6</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- SECTIE 2: PROGRAMMA VIA ICAL -->
+    <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
+        <div class="bg-blue-900 text-white px-4 py-3 font-bold text-lg flex justify-between items-center">
+            <span>📅 Programma JO14-1</span>
+            <span class="text-xs bg-blue-700 px-2 py-1 rounded">Live iCal</span>
+        </div>
+        
+        <div id="agenda-list" class="divide-y divide-gray-100 p-4">
+            <p class="text-gray-500 text-sm text-center py-4">Agenda inladen...</p>
+        </div>
+    </div>
+
+    <script>
+        // Jouw ingevulde Sportlink iCal URL
+        const ICAL_URL = 'https://data.sportlink.com/ical-team?token=lpf6dfk6m1uv2o6uno5m0i4b3n'; 
+
+        async function loadCalendar() {
+            const container = document.getElementById('agenda-list');
+
+            try {
+                const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(ICAL_URL)}`;
+                const response = await fetch(proxyUrl);
+                const data = await response.json();
+                
+                if (!data.contents) throw new Error("Kon data niet ophalen");
+
+                const jcalData = ICAL.parse(data.contents);
+                const vcalendar = new ICAL.Component(jcalData);
+                const events = vcalendar.getAllSubcomponents('vevent');
+
+                const now = new Date();
+                let html = '';
+                let count = 0;
+
+                const parsedEvents = events.map(e => {
+                    const event = new ICAL.Event(e);
+                    return {
+                        summary: event.summary,
+                        startDate: event.startDate.toJSDate(),
+                        location: event.location || 'Locatie n.t.b.'
+                    }
+                }).sort((a, b) => a.startDate - b.startDate);
+
+                for (const ev of parsedEvents) {
+                    // Toon wedstrijden vanaf gisteren en tot 5 stuks vooruit
+                    if (ev.startDate >= new Date(now.getTime() - 86400000) && count < 5) {
+                        const dateStr = ev.startDate.toLocaleDateString('nl-NL', { weekday: 'short', day: 'numeric', month: 'short' });
+                        const timeStr = ev.startDate.toLocaleTimeString('nl-NL', { hour: '2-digit', minute: '2-digit' });
+
+                        html += `
+                            <div class="py-3 flex flex-col justify-between">
+                                <div class="flex justify-between items-center mb-1">
+                                    <span class="text-xs font-semibold text-blue-600 uppercase tracking-wider">${dateStr} om ${timeStr}</span>
+                                </div>
+                                <div class="text-gray-800 font-bold text-sm mb-1">${ev.summary}</div>
+                                <div class="text-gray-400 text-xs flex items-center">📍 ${ev.location}</div>
+                            </div>
+                        `;
+                        count++;
+                    }
+                }
+
+                if (html === '') {
+                    container.innerHTML = `<p class="text-gray-500 text-sm text-center">Geen aankomende wedstrijden gevonden.</p>`;
+                } else {
+                    container.innerHTML = html;
+                }
+
+            } catch (error) {
+                console.error(error);
+                container.innerHTML = `<p class="text-red-500 text-sm text-center">Fout bij het laden van het iCal-programma.</p>`;
+            }
+        }
+
+        loadCalendar();
+    </script>
+</body>
+</html>
