@@ -77,6 +77,11 @@
     </div>
 
     <script>
+        // Deze functie zorgt ervoor dat een getypte letter 'O' altijd wordt omgezet naar een '0'
+        function normalizaNomen(nomen) {
+            return nomen.replace(/O14/gi, '014');
+        }
+
         async function laadEnBerekenStand() {
             const icoon = document.getElementById('updateIcoon');
             const btn = document.getElementById('updateBtn');
@@ -84,14 +89,12 @@
             btn.style.opacity = '0.8';
 
             try {
-                // Haal uitslagen.txt op met een timestamp om caching te voorkomen
                 const response = await fetch('uitslagen.txt?t=' + new Date().getTime());
                 if (!response.ok) throw new Error("Kon uitslagen.txt niet laden");
                 
                 const tekst = await response.text();
                 const regels = tekst.split('\n').map(r => r.trim()).filter(Boolean);
 
-                // Object om per team de stats bij te houden: { gespeeld, punten, voor, tegen }
                 const teams = {};
 
                 function zorgDatTeamBestaat(naam) {
@@ -100,14 +103,14 @@
                     }
                 }
 
-                // Verwerk alle regels uit uitslagen.txt
                 regels.forEach(regel => {
                     const delen = regel.split('|').map(d => d.trim());
                     if (delen.length === 4) {
-                        const thuisTeam = delen[0];
+                        // Pas de teamnamen direct aan zodra ze ingelezen worden
+                        const thuisTeam = normalizaNomen(delen[0]);
                         const thuisScore = parseInt(delen[1], 10);
                         const uitScore = parseInt(delen[2], 10);
-                        const uitTeam = delen[3];
+                        const uitTeam = normalizaNomen(delen[3]);
 
                         zorgDatTeamBestaat(thuisTeam);
                         zorgDatTeamBestaat(uitTeam);
@@ -131,7 +134,6 @@
                     }
                 });
 
-                // Converteer naar array en sorteer (op Punten -> Doelsaldo -> Doelpunten voor)
                 const ranglijst = Object.values(teams).sort((a, b) => {
                     const saldoA = a.voor - a.tegen;
                     const saldoB = b.voor - b.tegen;
@@ -141,7 +143,6 @@
                     return b.voor - a.voor;
                 });
 
-                // Bouw de HTML voor de tabel
                 let html = '';
                 ranglijst.forEach((t, index) => {
                     const positie = index + 1;
@@ -149,7 +150,6 @@
                     const saldoTekst = saldo > 0 ? `+${saldo}` : `${saldo}`;
                     const saldoKleur = saldo > 0 ? 'text-green-600' : (saldo < 0 ? 'text-red-500' : 'text-gray-600');
                     
-                    // Extra accent voor AGOVV
                     const isAgovv = t.naam.toLowerCase().includes('agovv');
                     const rijStijl = isAgovv ? 'bg-blue-50/30' : 'hover:bg-gray-50/50';
                     const naamStijl = isAgovv ? 'font-bold text-blue-900' : 'font-medium text-gray-800';
@@ -182,7 +182,6 @@
             }
         }
 
-        // Laad de stand direct bij openen
         laadEnBerekenStand();
     </script>
 </body>
