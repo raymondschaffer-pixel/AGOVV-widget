@@ -1,6 +1,6 @@
 # Mededelingen
 
-- Zaterdag 26 september oefenwedstrijd uit tegen SV Epe JO14-1 Start 13.30
+- Oefenwedstrijd is afgelast ! Zaterdag 26 september GEEN oefenwedstrijd 
 - Zaterdag 10 oktober oefenwedstrijd CVJJ JO14-1 om 10.30 veld 4
 - Grensrechters gezocht voor de oefenwedstrijden
 - Ranglijst toegevoegd op website
