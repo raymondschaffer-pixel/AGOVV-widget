@@ -10,3 +10,4 @@ FC Zutphen 014-1JM | 3 | 3 | AGOVV 014-1
 Robur et Velocitas 014-1 | 1 | 3 | ESA 014-1
 WSV 014-2 | 3 | 2 | FC Zutphen 014-1JM
 SV CCW '16 014-1JM | 0 | 2 | ESA 014-1
+ESA 014-1 | 3 | 3 | AGOVV 014-1
