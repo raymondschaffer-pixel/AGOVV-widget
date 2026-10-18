@@ -1,37 +1,51 @@
 [
   {
-    "datum": "2026-09-05",
-    "tijd": "13:00",
-    "tegenstander": "WSV O14-2",
-    "locatie": "Sportpark De Voorwaarts, Apeldoorn",
-    "type": "COMPETITIE"
-  },
-  {
-    "datum": "2026-09-12",
+    "datum": "2026-10-24",
     "tijd": "11:15",
-    "tegenstander": "SV CCW '16 O14-1JM",
+    "tegenstander": "Veensche Boys 014-1JM",
     "locatie": "Sportpark Berg en Bos, Apeldoorn",
     "type": "COMPETITIE"
   },
   {
-    "datum": "2026-09-15",
-    "tijd": "18:00",
-    "tegenstander": "Robur et Velocitas O14-1",
-    "locatie": "Sportpark Berg en Bos, Apeldoorn",
-    "type": "COMPETITIE"
-  },
-  {
-    "datum": "2026-09-19",
+    "datum": "2026-10-31",
     "tijd": "10:30",
-    "tegenstander": "FC Zutphen O14-1JM",
-    "locatie": "Sportcomplex 't Meijerink, Zutphen",
+    "tegenstander": "Hattem O14-1",
+    "locatie": "Sportpark 't Achterveen, Hattem",
     "type": "COMPETITIE"
   },
   {
-    "datum": "2026-10-03",
-    "tijd": "09:30",
-    "tegenstander": "ESA O14-1",
-    "locatie": "Sportcentrum Rijkerswoerd",
+    "datum": "2026-11-7",
+    "tijd": "12:30",
+    "tegenstander": "Epe O14-1",
+    "locatie": "Sportpark Berg en Bos, Apeldoorn",
+    "type": "COMPETITIE"
+  },
+  {
+    "datum": "2026-11-14",
+    "tijd": "12:30",
+    "tegenstander": "Robur et Velocitas O14-1",
+    "locatie": "Sportcomplex Keschoten, Apeldoorn",
+    "type": "COMPETITIE"
+  },
+  {
+    "datum": "2026-11-25",
+    "tijd": "19:00",
+    "tegenstander": "Zeewolde O14-1",
+    "locatie": "Sportpark De Horst",
+    "type": "COMPETITIE"
+  },
+  {
+    "datum": "2026-11-28",
+    "tijd": "11:15",
+    "tegenstander": "FC Horst O14-1",
+    "locatie": "Sportpark Berg en Bos, Apeldoorn",
+    "type": "COMPETITIE"
+  },
+  {
+     "datum": "2026-12-5",
+    "tijd": "08:30",
+    "tegenstander": "Zwart Wit O14-1",
+    "locatie": "Sportpark Parkweg, Harderwijk",
     "type": "COMPETITIE"
   }
 ]
