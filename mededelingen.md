@@ -1,9 +1,9 @@
 # Mededelingen
 
-- Grensrechters gezocht voor de onderstaande oefenwedstrijden
-- Zaterdag 10 oktober oefenwedstrijd SV Epe JO14-1 om 10.30 veld 4
-- Dinsdag 20 oktober: Oefenwedstrijd wordt gezocht. Info volgt als het concreet is
-- Donderdag 22 oktober: Oefenwedstrijd thuis tegen Groen Wit JO14-1 tijdstip volgt nog
+- Nieuw vlagschema is bekend. Kan je niet/ben je verhinderd, zelf vervanging zoeken!
+- Donderdag 22 oktober: Oefenwedstrijd thuis tegen Groen Wit JO14-1 tijdstip 15:00
+- Zaterdag 24 oktober : Start fase 2 thuis 11.15 Veld 2 tegen Veensche Boys
+- Wedstrijd 21 november verplaatst naar 25 november. 
 - Douchen na wedstrijd is verplicht conform AGOVV huisregels.
 
 Datum laatste update: Vandaag
