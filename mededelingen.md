@@ -1,7 +1,7 @@
 # Mededelingen
 
-- Next match : Zaterdag 31 oktober Hattem JO14-1 AGOVV JO14-1 10.30
-- Verzamelen 09.15 AGOVV parkeerplaats
+- Next match : Zaterdag 7 november AGOVV JO14-1 - Epe 10.15 stadionveld
+- Verzamelen 09.15 AGOVV 
 - Wie o wie heeft Sam's trainingsshirt met lange mouw ?
 - Moet er iemand meerijden? Geef dit aan in de appgroep 
 - Nieuw vlagschema is bekend. Kan je niet/ben je verhinderd, zelf vervanging zoeken!
